@@ -30,12 +30,7 @@ package io.github.williamyin2024.commutils.time;
  * Note that it is up to the caller to ensure progress of the timer using one of the
  * {@link #update()} methods or {@link #sleep(long)}. The timer will cache the current time and
  * return it indefinitely until the timer has been updated. This allows the caller to limit
- * unnecessary system calls and update the timer only when needed. For example, a timer which is
- */
-// * waiting a request sent through the {@link org.apache.kafka.clients.NetworkClient} should call
-// * {@link #update()} following each blocking call to
-// * {@link org.apache.kafka.clients.NetworkClient#poll(long, long)}.
-/**
+ * unnecessary system calls and update the timer only when needed.
  * <p>
  * A typical usage might look something like this:
  *
